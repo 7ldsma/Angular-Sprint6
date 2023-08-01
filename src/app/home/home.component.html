@@ -1,24 +1,21 @@
-<div *ngIf="!start">
+<div class="intro px-4" *ngIf="!start">
     <div class="row justify-content-center">
         <div class="col col-sm-8 text-center">
-            <p>Welcome to Spacestory App <br> A basic web app programmed in Angular.
-            </p>
+            <h2>Bienvenid@ a Spacestory App <br> Una aplicación web programada en Angular. </h2>
+            <p>En ella se aplican conceptos básicos como Componentes, Interfaces, @input, ngIf y ngFor</p>
         </div>
     </div>
     <div class="row justify-content-center text-center">
-        <div class="col">
-            <button (click)="comenzar()" class="btn btn-primary mx-2 p-3">Comenzar</button>
+        <div class="col mt-4 d-grid col-6">
+            <button (click)="comenzar()" class="btn btn-lg btn-primary p-4">Comenzar</button>
         </div>
     </div>
 </div>
 
-<div class="p-4" *ngIf="start" [style.backgroundImage]="'url(' + selectedImg + ')'">
-    <app-escena [historyParts]="historyParts" [activeIndex]="activeIndex"></app-escena>
+<div class="parts row historyPills" *ngIf="start">
+    <app-escena [historyParts]="historyParts"></app-escena>
 
-    <div class="row mt-2">
-        <div class="col d-grid d-sm-block text-center">
-            <button (click)="anterior()" class="btn btn-primary col-3 mx-2 p-3">Anterior</button>
-            <button (click)="siguiente()" class="btn btn-primary col-3 mx-2 p-3">Siguiente</button>
-        </div>
-    </div>
 </div>
+
+
+<!--  -->

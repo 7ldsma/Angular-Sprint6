@@ -16,7 +16,24 @@ public historyParts: Historia[] = [{
   img: "./assets/img/1.jpg"
 }];
 
-@Input()
+
+
 public activeIndex = 0;
+public selectedImg = this.historyParts[0].img;
+
+siguiente() {
+  if (this.activeIndex < this.historyParts.length - 1) {
+    this.activeIndex++;
+    this.selectedImg = this.historyParts[this.activeIndex].img;
+  }
+}
+
+anterior() {
+  if (this.activeIndex > 0) {
+    this.activeIndex--;
+    this.selectedImg = this.historyParts[this.activeIndex].img;
+  }
+}
+
 
 }

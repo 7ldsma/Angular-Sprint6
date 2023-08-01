@@ -1,4 +1,4 @@
-<div class="row justify-content-center mt-4">
+<div class="contenedor d-flex flex-column justify-content-center align-items-center" [style.backgroundImage]="'url(' + selectedImg + ')'">
     <div class="col col-md-10">
         <ul>
             <li *ngFor="let phrase of historyParts; let i = index" class="list-group-item list-group-item-light mt-2 p-4 border rounded-pill text-center" [ngClass]="{'active': i === activeIndex}">
@@ -6,5 +6,9 @@
             </li>
         </ul>
 
+    </div>
+    <div class="col col-sm-10 d-block text-center">
+        <button (click)="anterior()" class="btn btn-primary col-4 mx-2 p-3">Anterior</button>
+        <button (click)="siguiente()" class="btn btn-primary col-4 mx-2 p-3">Siguiente</button>
     </div>
 </div>

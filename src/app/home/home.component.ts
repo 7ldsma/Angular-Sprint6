@@ -8,8 +8,6 @@ import { Historia } from './interfaces/historia.interface';
 })
 export class HomeComponent {
 
-  public start:boolean = false;
-
   public historyParts: Historia[] = [{
     part: "Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial",
     img: "./assets/img/1.jpg",
@@ -24,26 +22,13 @@ export class HomeComponent {
     img: "./assets/img/4.jpg",
   }];
 
-  comenzar() {
-    this.start = true;
-  }
+  public start:boolean = false;
 
-  public activeIndex = 0;
-  public selectedImg = this.historyParts[0].img;
+comenzar() {
+  this.start = true;
+}
 
-  siguiente() {
-    if (this.activeIndex < this.historyParts.length - 1) {
-      this.activeIndex++;
-      this.selectedImg = this.historyParts[this.activeIndex].img;
-    }
-  }
 
-  anterior() {
-    if (this.activeIndex > 0) {
-      this.activeIndex--;
-      this.selectedImg = this.historyParts[this.activeIndex].img;
-    }
-  }
   
 
 }
