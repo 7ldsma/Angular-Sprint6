@@ -1,0 +1,10 @@
+<div class="row justify-content-center mt-4">
+    <div class="col col-md-10">
+        <ul>
+            <li *ngFor="let phrase of historyParts; let i = index" class="list-group-item list-group-item-light mt-2 p-4 border rounded-pill text-center" [ngClass]="{'active': i === activeIndex}">
+                {{ phrase.part }}
+            </li>
+        </ul>
+
+    </div>
+</div>
